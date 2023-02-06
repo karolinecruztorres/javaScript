@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .square {
+      width: calc(100% / 3);
+      height: calc(100vh / 2);
+      float: left;
+      box-sizing: border-box;
+    }
+    #square1 {
+      background-color: red;
+    }
+    #square2 {
+      background-color: blue;
+    }
+    #square3 {
+      background-color: green;
+    }
+    #square4 {
+      background-color: yellow;
+    }
+    #square5 {
+      background-color: purple;
+    }
+    #square6 {
+      background-color: pink;
+    }
+    @media only screen and (max-width: 600px) {
+      .square {
+        width: 100%;
+        height: calc(100vh / 3);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="square1" class="square"></div>
+  <div id="square2" class="square"></div>
+  <div id="square3" class="square"></div>
+  <div id="square4" class="square"></div>
+  <div id="square5" class="square"></div>
+  <div id="square6" class="square"></div>
+  <script>
+    const squares = document.querySelectorAll(".square");
+    const colors = ["red", "blue", "green", "yellow", "purple", "pink", "orange", "brown", "grey", "black"];
+
+    squares.forEach(square => {
+      square.addEventListener("click", function() {
+        const currentColor = this.style.backgroundColor;
+        let nextIndex = (colors.indexOf(currentColor) + 1) % colors.length;
+        this.style.backgroundColor = colors[nextIndex];
+        checkIfColorsAreEqual();
+      });
+    });
+
+    function checkIfColorsAreEqual() {
+      let firstColor = squares[0].style.backgroundColor;
+      let equal = true;
+      for (let i = 1; i < squares.length; i++) {
+        if (squares[i].style.backgroundColor !== firstColor) {
+          equal = false;
+          break;
+        }
+      }
+      if (equal) {
+        alert("Parabéns!");
+      }
+    }
+  </script>
+</body>
+</html>

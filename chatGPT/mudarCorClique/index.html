@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .button {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: green;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .button p {
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="button" id="startBtn">
+    <p>Start</p>
+  </div>
+  <script>
+    const startBtn = document.querySelector('#startBtn');
+    startBtn.addEventListener('click', () => {
+      window.location.href = 'outraPagina.html';
+    });
+  </script>
+</body>
+</html>

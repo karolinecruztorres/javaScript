@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #game {
+            width: 400px;
+            margin: 0 auto;
+          }
+          
+          .card {
+            width: 50px;
+            height: 50px;
+            background-image: url(default.png);
+            background-size: cover;
+          }
+          
+    </style>
+    
+</head>
+<body>
+    <table id="game">
+        <tr>
+          <td class="card"></td>
+          <td class="card"></td>
+          <td class="card"></td>
+          <td class="card"></td>
+        </tr>
+        <tr>
+          <td class="card"></td>
+          <td class="card"></td>
+          <td class="card"></td>
+          <td class="card"></td>
+        </tr>
+      </table>
+      
+      <script>
+        const cards = document.querySelectorAll(".card");
+        const images = ["image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg", "image5.jpg", "image6.jpg", "image7.jpg", "image8.jpg", "image9.jpg", "image10.jpg"];
+
+        cards.forEach(card => {
+          card.addEventListener("click", function() {
+            this.style.backgroundImage = `url(${images[Math.floor(Math.random() * images.length)]})`;
+          });
+        });
+      </script>
+</body>
+</html>
