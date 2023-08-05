@@ -6,14 +6,14 @@
     <title>Dom</title>
   </head>
   <body>
-    <!--DOM basics
+    <!--DOM basics.
     <p>YouTube Subscribe Button</p>
     <button class="js-subscribe-button" onclick="
       subscribe();
     ">Subscribe</button>
     -->
 
-    <!-- Lesson 1 - Shipping Calculator
+    <!-- Lesson 1 - Shipping Calculator.
     <p>Amazon Shipping Calculator</p>
     <p>Orders under $40 = +$10 shipping.</p>
     <p>Orders over $40 = FREE shipping.</p>
@@ -28,8 +28,23 @@
     <p class="js-total-cost"></p>
     -->
 
+    <!--Lesson 2 - Using querySelector. -->
+    <button>Button1</button>
+    <button class="js-button2">Button2</button>
+    <br><br>
+
+    <button onclick="
+      choose('heads');
+    ">heads</button>
+
+    <button onclick="
+      choose('tails');
+    ">tails</button>
+    
+    <p class="js-choice"></p>
+
     <script>    
-      // DOM basics
+      // DOM basics.
       /*    
       function subscribe() {
         const buttonElement = document.querySelector('.js-subscribe-button');
@@ -42,7 +57,7 @@
       }
       */
 
-      //Lesson 1 - Shipping Calculator
+      //Lesson 1 - Shipping Calculator.
       /*
       function handleCostKeydown(event) {
         event.key === 'Enter' ? CalculateTotal() : document.querySelector('.js-total-cost').  innerHTML = '';
@@ -57,7 +72,18 @@
         document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
       }
       */
-     
+      
+      //Lesson 2 - Using querySelector.
+      console.log(document.querySelector('button'));
+      document.querySelector('.js-button2').innerHTML = 'Changed!';
+
+      let userChoice = '';
+
+      function choose(choice) {
+        userChoice = choice;
+        const choiceDisplay = document.querySelector('.js-choice');
+        choiceDisplay.innerHTML = `You chose: ${userChoice}`;
+      }
     </script>
   </body>
 </html>
