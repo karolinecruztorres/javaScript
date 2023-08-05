@@ -57,9 +57,11 @@
     -->
 
     <!--Lesson 4 - Use onkeyup-->
-    <input class=""
-    placeholder="Type something">
-    <p class=""></p>
+    <input class="js-input"
+    placeholder="Type something"
+    onkeyup="onkeyupText(event)">
+
+    <p class="js-message"></p>
 
    <script>
       /*
@@ -119,8 +121,12 @@
       }
       */
 
-      /*//Lesson 4 - Use onkeyup*/
-
+      //Lesson 4 - Use onkeyup
+      function onkeyupText(event) {
+        const inputElement = document.querySelector('.js-input');
+        const displaysText = document.querySelector('.js-message');
+        displaysText.innerHTML = inputElement.value;
+      }
     </script>
   </body>
 </html>
