@@ -8,7 +8,7 @@
   <body>
     <script>
       /*
-      //Objects basics.
+      // Objects basics.
       const product = {
         name: 'socks',
         price: 1090
@@ -28,7 +28,7 @@
       */
     
       /*
-      //Using function in an object and JSON introduction.
+      // Using function in an object and JSON introduction.
       const product2 = {
         name: 'shirt',
         'delivery-time': '1 day',
@@ -55,7 +55,7 @@
       */
     
       /*
-      //Method and shortcuts introduction.
+      // Method and shortcuts introduction.
       console.log('hello'.length);
       console.log('hello'.toUpperCase());
     
@@ -81,7 +81,7 @@
         message: 'Good job!',
         price: 799
       };
-      //const message = object4.message;
+      // const message = object4.message;
       const { message, price } = object4;
       console.log(message); 
       console.log(price ); 
@@ -101,7 +101,7 @@
       */
         
       /*
-      //Lesson 1 - Creating an object.
+      // Lesson 1 - Creating an object.
       const product1 = {
         name: 'basketball',
         price: 2095
@@ -114,13 +114,13 @@
       */
     
       /*
-      //Lesson 2 - Displaying an object. 
+      // Lesson 2 - Displaying an object. 
       console.log(product1);
       console.log(product2);
       */
     
       /*
-      //Lesson 3 - Adding a property to an object.
+      // Lesson 3 - Adding a property to an object.
       product1.price += 500;
       console.log(product1);
       product1['delivery-time'] = '3 days';
@@ -129,8 +129,8 @@
     
       
       /*
-      //Lesson 4 - Compare an object values (less expensive). 
-      //The first way I did
+      // Lesson 4 - Compare an object values (less expensive). 
+      // The first way I did
       function comparePrice(product1, product2) {
         product1.price < product2.price ? console.log (product1) : console.log(product2);
       };
@@ -138,7 +138,7 @@
       comparePrice(product1, product2);
       */
     
-      //Than I simplified
+      // Than I simplified
       /*
       function comparePrice(product1, product2) {
         return product1.price < product2.price ?  product1 : product2;
@@ -147,13 +147,13 @@
       console.log(comparePrice(product1, product2));
       */
     
-      //Lesson 5 - Compare an object values (same values inside in all properties). 
+      // Lesson 5 - Compare an object values (same values inside in all properties). 
       function isSameProduct(product1, product2) {
         return product1.name === product2.name &&   product1.price === product2.price ? true :  false; 
       }
       
       /*
-      //Here is an alternative solution that uses less code.
+      // Here is an alternative solution that uses less code.
       function isSameProduct(product1, product2) {
         return (
           product1.name === product2.name &&
@@ -181,13 +181,13 @@
       console.log(isSameProduct(product2, product3));
       
       /*
-      //Lesson 6 - search in Google or an IA how to convert a string to lowercase.
+      // Lesson 6 - search in Google or an IA how to convert a string to lowercase.
       const greet = 'Good Morning';
       console.log(greet.toLocaleLowerCase()); 
       */
     
       /*
-      //Lesson 7 - search how to repeat a string many times.
+      // Lesson 7 - search how to repeat a string many times.
       const text = 'I want to break free. ';
       console.log(text.repeat(3));
       */
