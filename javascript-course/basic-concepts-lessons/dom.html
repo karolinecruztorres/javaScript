@@ -20,7 +20,7 @@
     <input class="js-cost-input" 
     placeholder="Cost of order"
     onkeydown="handleCostKeydown(event);">
-    
+
     <button onclick="
       CalculateTotal();
     ">Calculate</button>
@@ -28,7 +28,7 @@
     <p class="js-total-cost"></p>
     -->
 
-    <!--Lesson 2 - Using querySelector. -->
+    <!--Lesson 2 - Use querySelector. 
     <button>Button1</button>
     <button class="js-button2">Button2</button>
     <br><br>
@@ -40,12 +40,25 @@
     <button onclick="
       choose('tails');
     ">tails</button>
-    
-    <p class="js-choice"></p>
 
-    <script>    
+    <p class="js-choice"></p>
+    -->
+
+    <!--Lesson 3 - Get a input value.
+    <input class="js-name-input" 
+    placeholder="Name"
+    onkeydown="showMessageKeydown(event);">
+
+    <button onclick="
+      nameInput();
+    ">Submit</button>
+
+    <p class="js-message"></p>
+    -->
+   
+   <script>
+      /*
       // DOM basics.
-      /*    
       function subscribe() {
         const buttonElement = document.querySelector('.js-subscribe-button');
       
@@ -57,10 +70,10 @@
       }
       */
 
-      //Lesson 1 - Shipping Calculator.
       /*
+      //Lesson 1 - Shipping Calculator.
       function handleCostKeydown(event) {
-        event.key === 'Enter' ? CalculateTotal() : document.querySelector('.js-total-cost').  innerHTML = '';
+        event.key === 'Enter' ? CalculateTotal() : document.querySelector('.js-total-cost').innerHTML =   '';
       }
 
       function CalculateTotal() {
@@ -72,8 +85,9 @@
         document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
       }
       */
-      
-      //Lesson 2 - Using querySelector.
+
+      /*
+      //Lesson 2 - Use querySelector.
       console.log(document.querySelector('button'));
       document.querySelector('.js-button2').innerHTML = 'Changed!';
 
@@ -84,6 +98,21 @@
         const choiceDisplay = document.querySelector('.js-choice');
         choiceDisplay.innerHTML = `You chose: ${userChoice}`;
       }
+      */
+
+      /*
+      //Lesson 3 - Get a input value.
+      function nameInput() {
+        const inputElement = document.querySelector('.js-name-input');
+        const displayName = document.querySelector('.js-message');
+        displayName.innerHTML = `Your name is: ${inputElement.value}.`;
+      }
+
+      //With onkeydown event.
+      function showMessageKeydown(event) {
+        event.key === 'Enter' ?  nameInput() : document.querySelector('.js-message').innerHTML = '';
+      }
+      */
     </script>
   </body>
 </html>
