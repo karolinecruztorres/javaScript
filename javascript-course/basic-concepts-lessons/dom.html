@@ -55,7 +55,12 @@
 
     <p class="js-message"></p>
     -->
-   
+
+    <!--Lesson 4 - Use onkeyup-->
+    <input class=""
+    placeholder="Type something">
+    <p class=""></p>
+
    <script>
       /*
       // DOM basics.
@@ -78,11 +83,11 @@
 
       function CalculateTotal() {
         const inputElement = document.querySelector('.js-cost-input');
-        let cost = Number(inputElement.value);
+        let cost = Number(inputElement.value) * 100; // Precision issues resolution
 
-        cost < 40 ? cost += 10 : cost;
+        cost < 4000 ? cost += 1000 : cost;
 
-        document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
+        document.querySelector('.js-total-cost').innerHTML = `$${cost / 100}`;
       }
       */
 
@@ -113,6 +118,9 @@
         event.key === 'Enter' ?  nameInput() : document.querySelector('.js-message').innerHTML = '';
       }
       */
+
+      /*//Lesson 4 - Use onkeyup*/
+
     </script>
   </body>
 </html>
