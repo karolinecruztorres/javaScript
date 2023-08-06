@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS</title>
     <style>
-      /*CSS Basics*/
+      /* Lesson 1 - Subscribe button. 
       body {
         font-family: Arial;
       }
@@ -19,8 +19,10 @@
         border-radius: 50px;
         cursor: pointer;
         margin-bottom: 30px;
-      }
+      } */
+      
 
+      /* Lesson 2 - Shipping Calculator.
       .is-subscribed {
         background-color: rgb(240, 240, 240);
         color: black;
@@ -38,17 +40,87 @@
         padding: 12px 15px;
         font-size: 15px;
         cursor: pointer;
+      } */
+      
+
+      /* Lesson 3 - CSS Buttons.
+      body {
+        font-family: Arial;
       }
+      .add-button {
+        background-color: rgb(255, 216, 20);
+        border: none;
+        border-radius: 50px;
+        padding: 8px 40px;
+        font-size: 15px;
+        margin-right: 50px;
+      }
+
+      .request-button {
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        padding: 12px 18px;
+        font-weight: bold;
+        margin-right: 20px;
+      }
+
+      .schedule-button {
+        background-color: rgb(230,230,230);
+        border: none;
+        border-radius: 6px;
+        padding: 12px 18px;
+        font-weight: bold;
+      } */
+      
+
+      /* Lesson 5 - ON/OFF button. 
+      .on-off-button {
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 10px;
+        font-family: Arial;
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+      .is-toggled {
+        background-color: rgb(230,230,230);
+        color: black;
+      } */
+
+      /* Lesson 6 - Interactive buttons. */
+      .toggle-button {
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 6px 9px;
+        font-family: Arial;
+        font-size: 9px;
+        cursor: pointer;
+        margin-right: 5px;
+      }
+
+      .is-toggled {
+        background-color: rgb(230,230,230);
+        color: black;
+      }
+
     </style>
   </head>
   <body>
-    <!-- DOM basics.-->
+    <!-- Lesson 1 - Subscribe button. 
     <p>YouTube Subscribe Button</p>
     <button class="js-subscribe-button subscribe-button" onclick="subscribe();">
       Subscribe
     </button>
+    -->
 
-    <!-- Lesson 1 - Shipping Calculator.-->
+    <!-- Lesson 2 - Shipping Calculator. 
     <p>Amazon Shipping Calculator</p>
     <p>Orders under $40 = +$10 shipping.</p>
     <p>Orders over $40 = FREE shipping.</p>
@@ -61,45 +133,37 @@
     </button>
 
     <p class="js-total-cost"></p>
-
-    <!-- Lesson 2 - Use querySelector. 
-    <button>Button1</button>
-    <button class="js-button2">Button2</button>
-    <br><br>
-
-    <button onclick="
-      choose('heads');
-    ">heads</button>
-
-    <button onclick="
-      choose('tails');
-    ">tails</button>
-
-    <p class="js-choice"></p>
     -->
 
-    <!-- Lesson 3 - Get a input value.
-    <input class="js-name-input" 
-    placeholder="Name"
-    onkeydown="showMessageKeydown(event);">
+    <!-- Lesson 3 - CSS Buttons. 
+    <button class="add-button">
+      Add to Cart
+    </button>
 
-    <button onclick="
-      nameInput();
-    ">Submit</button>
+    <button class="request-button">
+      Request now
+    </button>
 
-    <p class="js-message"></p>
+    <button class="schedule-button">
+      Schedule for later
+    </button>
     -->
 
-    <!-- Lesson 4 - Use onkeyup
-    <input class="js-input"
-    placeholder="Type something"
-    onkeyup="onkeyupText(event)">
-
-    <p class="js-message"></p>
+    <!-- Lesson 4 - .classList.contains(). 
+    <button class="js-button">Test</button>
     -->
+
+    <!-- Lesson 5 - ON/OFF button.
+    <button class="on-off-button js-on-off-button" onclick="toggled();">OFF</button>
+    -->
+
+    <!-- Lesson 6 - Interactive buttons. -->  
+    <button class="toggle-button" onclick="toggled(this);">Gaming</button>
+    <button class="toggle-button" onclick="toggled(this);">Music</button>
+    <button class="toggle-button" onclick="toggled(this);">Tech</button>
 
    <script>
-      // DOM basics.
+      /* Lesson 1 - Subscribe button.
       function subscribe() {
         const buttonElement = document.querySelector('.js-subscribe-button');
       
@@ -111,57 +175,49 @@
           buttonElement.classList.remove('is-subscribed');
         }
       }
+      */
       
-      // Lesson 1 - Shipping Calculator.
+      /* Lesson 2 - Shipping Calculator.
       function handleCostKeydown(event) {
         event.key === 'Enter' ? CalculateTotal() : document.querySelector('.js-total-cost').innerHTML =   '';
       }
 
       function CalculateTotal() {
         const inputElement = document.querySelector('.js-cost-input');
-        let cost = Number(inputElement.value) * 100; // Precision issues resolution
+        let cost = Number(inputElement.value) * 100; // Precision issues resolution.
 
         cost < 4000 ? cost += 1000 : cost;
 
         document.querySelector('.js-total-cost').innerHTML = `$${cost / 100}`;
       }
+      */
       
-      /*
-      // Lesson 2 - Use querySelector.
-      console.log(document.querySelector('button'));
-      document.querySelector('.js-button2').innerHTML = 'Changed!';
+      /* Lesson 4 - .classList.contains().
+      console.log(document.querySelector('.js-button').classList.contains('js-button'));
+      */
 
-      let userChoice = '';
+      /* Lesson 5 - ON/OFF button. 
+      function toggled() {
+        const onOffButton = document.querySelector('.js-on-off-button');
 
-      function choose(choice) {
-        userChoice = choice;
-        const choiceDisplay = document.querySelector('.js-choice');
-        choiceDisplay.innerHTML = `You chose: ${userChoice}`;
+        if (!onOffButton.classList.contains('is-toggled')) {
+          onOffButton.innerHTML = 'ON';
+          onOffButton.classList.add('is-toggled');
+        } else {
+          onOffButton.innerHTML = 'OFF';
+          onOffButton.classList.remove('is-toggled');
+        }
       }
       */
 
-      /*
-      // Lesson 3 - Get a input value.
-      function nameInput() {
-        const inputElement = document.querySelector('.js-name-input');
-        const displayName = document.querySelector('.js-message');
-        displayName.innerHTML = `Your name is: ${inputElement.value}.`;
+      /* Lesson 6 - Interactive buttons. */
+      function toggled(button) {
+        if (!button.classList.contains('is-toggled')) {
+          button.classList.add('is-toggled');
+        } else {
+          button.classList.remove('is-toggled');
+        }
       }
-
-      // With onkeydown event.
-      function showMessageKeydown(event) {
-        event.key === 'Enter' ?  nameInput() : document.querySelector('.js-message').innerHTML = '';
-      }
-      */
-
-      /*
-      // Lesson 4 - Use onkeyup
-      function onkeyupText(event) {
-        const inputElement = document.querySelector('.js-input');
-        const displaysText = document.querySelector('.js-message');
-        displaysText.innerHTML = inputElement.value;
-      }
-      */
     </script>
   </body>
 </html>
