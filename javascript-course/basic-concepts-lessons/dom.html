@@ -4,6 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
+    <style>
+      body {
+        font-family: Arial;
+        font-size: 15px;
+        margin-left: 20px;
+      }
+
+      .cost-input {
+        padding: 10px 0px 10px 10px;
+        font-size: 15px;
+      }
+
+      .button {
+        padding: 12px;
+        border: none;
+        background-color: green;
+        color: white;
+        font-size: 15px;
+      }
+
+      .error-message {
+        color: red;
+      }
+      
+    </style>
   </head>
   <body>
     <!-- DOM basics.
@@ -13,20 +38,20 @@
     ">Subscribe</button>
     -->
 
-    <!-- Lesson 1 - Shipping Calculator.
+    <!-- Lesson 1 - Shipping Calculator. -->
     <p>Amazon Shipping Calculator</p>
     <p>Orders under $40 = +$10 shipping.</p>
     <p>Orders over $40 = FREE shipping.</p>
-    <input class="js-cost-input" 
+    <input class="js-cost-input cost-input" 
     placeholder="Cost of order"
     onkeydown="handleCostKeydown(event);">
 
-    <button onclick="
-      CalculateTotal();
-    ">Calculate</button>
+    <button class="button" onclick="CalculateTotal();">
+      Calculate
+    </button>
 
     <p class="js-total-cost"></p>
-    -->
+    
 
     <!-- Lesson 2 - Use querySelector. 
     <button>Button1</button>
@@ -56,16 +81,16 @@
     <p class="js-message"></p>
     -->
 
-    <!-- Lesson 4 - Use onkeyup-->
+    <!-- Lesson 4 - Use onkeyup
     <input class="js-input"
     placeholder="Type something"
     onkeyup="onkeyupText(event)">
 
     <p class="js-message"></p>
+    -->
 
    <script>
-      /*
-      // DOM basics.
+      /* DOM basics.
       function subscribe() {
         const buttonElement = document.querySelector('.js-subscribe-button');
       
@@ -77,24 +102,32 @@
       }
       */
 
-      /*
-      // Lesson 1 - Shipping Calculator.
+      /* Lesson 1 - Shipping Calculator. */
       function handleCostKeydown(event) {
-        event.key === 'Enter' ? CalculateTotal() : document.querySelector('.js-total-cost').innerHTML =   '';
+        event.key === 'Enter' ? CalculateTotal() : document.querySelector('.js-total-cost').innerHTML = '';
       }
 
       function CalculateTotal() {
         const inputElement = document.querySelector('.js-cost-input');
+        const totalCost = document.querySelector('.js-total-cost');
         let cost = Number(inputElement.value) * 100; // Precision issues resolution
 
-        cost < 4000 ? cost += 1000 : cost;
-
-        document.querySelector('.js-total-cost').innerHTML = `$${cost / 100}`;
+        if (cost <= 0) {
+          totalCost.innerHTML = 'Error: cost must be greater than $0';
+          totalCost.classList.add('error-message');
+        } else if (cost < 4000) {
+          cost += 1000;
+          totalCost.innerHTML = `$${cost / 100}`;
+          totalCost.classList.remove('error-message');
+        } else {
+          cost;
+          totalCost.innerHTML = `$${cost / 100}`;
+          totalCost.classList.remove('error-message');
+        }
       }
-      */
+      
 
-      /*
-      // Lesson 2 - Use querySelector.
+      /* Lesson 2 - Use querySelector.
       console.log(document.querySelector('button'));
       document.querySelector('.js-button2').innerHTML = 'Changed!';
 
@@ -107,8 +140,7 @@
       }
       */
 
-      /*
-      // Lesson 3 - Get a input value.
+      /* Lesson 3 - Get a input value.
       function nameInput() {
         const inputElement = document.querySelector('.js-name-input');
         const displayName = document.querySelector('.js-message');
@@ -121,12 +153,13 @@
       }
       */
 
-      // Lesson 4 - Use onkeyup
+      /* Lesson 4 - Use onkeyup
       function onkeyupText(event) {
         const inputElement = document.querySelector('.js-input');
         const displaysText = document.querySelector('.js-message');
         displaysText.innerHTML = inputElement.value;
       }
+      */
     </script>
   </body>
 </html>
