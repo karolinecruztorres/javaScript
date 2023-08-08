@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays and Loops</title>
+</head>
+<body>
+  <script>
+    //Arrays Basics.
+    const myArray = [
+      10, 
+      20, 
+      30
+    ];
+    console.log(myArray);
+    console.log(myArray[0]);
+    myArray[0] = 99;
+    console.log(myArray);
+
+    [1, 'hello', true, { name: 'socks' }, [1, 2]] // An array can store strings, numbers, objects, and a nested array simultaneously
+
+    console.log(typeof [1, 2]); // Returns that the array is an object, because every array is an object.
+    console.log(Array.isArray([1, 2])); // Returns that the object is of array type.
+
+    console.log(myArray.length); // Tells how many values are in the array.
+    myArray.push(100); // Adds a value to the end of the array.
+    console.log(myArray);
+    console.log(myArray.length); 
+
+    myArray.splice(0, 1); // Removes a value from an array.
+    console.log(myArray);
+    myArray.splice(0, 2); 
+    console.log(myArray);
+  </script>
+</body>
+</html>
