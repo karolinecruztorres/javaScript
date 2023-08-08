@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
     <style>
-      body {
-        font-family: Arial;
-        font-size: 15px;
-        margin-left: 20px;
-      }
-
       .cost-input {
         padding: 10px 0px 10px 10px;
         font-size: 15px;
@@ -22,10 +16,6 @@
         background-color: green;
         color: white;
         font-size: 15px;
-      }
-
-      .error-message {
-        color: red;
       }
       
     </style>
@@ -104,26 +94,16 @@
 
       /* Lesson 1 - Shipping Calculator. */
       function handleCostKeydown(event) {
-        event.key === 'Enter' ? CalculateTotal() : document.querySelector('.js-total-cost').innerHTML = '';
+        event.key === 'Enter' ? CalculateTotal() : document.querySelector('.js-total-cost').innerHTML =   '';
       }
 
       function CalculateTotal() {
         const inputElement = document.querySelector('.js-cost-input');
-        const totalCost = document.querySelector('.js-total-cost');
-        let cost = Number(inputElement.value) * 100; // Precision issues resolution
+        let cost = Number(inputElement.value) * 100; // Precision issues resolution.
 
-        if (cost <= 0) {
-          totalCost.innerHTML = 'Error: cost must be greater than $0';
-          totalCost.classList.add('error-message');
-        } else if (cost < 4000) {
-          cost += 1000;
-          totalCost.innerHTML = `$${cost / 100}`;
-          totalCost.classList.remove('error-message');
-        } else {
-          cost;
-          totalCost.innerHTML = `$${cost / 100}`;
-          totalCost.classList.remove('error-message');
-        }
+        cost < 4000 ? cost += 1000 : cost;
+
+        document.querySelector('.js-total-cost').innerHTML = `$${cost / 100}`;
       }
       
 
