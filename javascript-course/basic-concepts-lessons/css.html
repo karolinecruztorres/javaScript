@@ -100,7 +100,7 @@
         border-radius: 4px;
         padding: 6px 9px;
         font-family: Arial;
-        font-size: 9px;
+        font-size: 16px;
         cursor: pointer;
         margin-right: 5px;
       }
@@ -213,9 +213,18 @@
       /* Lesson 6 - Interactive buttons. */
       function toggled(button) {
         if (!button.classList.contains('is-toggled')) {
+          turnOffPreviousButton(); // Lesson 7 - Activate only one button at a time.
           button.classList.add('is-toggled');
         } else {
           button.classList.remove('is-toggled');
+        }
+      }
+
+      // Lesson 7 - Activate only one button at a time.
+      function turnOffPreviousButton() {
+        const previousButton = document.querySelector('.is-toggled');
+        if (previousButton) {
+          previousButton.classList.remove('is-toggled');
         }
       }
     </script>
