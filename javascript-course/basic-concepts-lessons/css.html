@@ -19,15 +19,20 @@
         border-radius: 50px;
         cursor: pointer;
         margin-bottom: 30px;
-      } */
+      } 
       
-
-      /* Lesson 2 - Shipping Calculator.
       .is-subscribed {
         background-color: rgb(240, 240, 240);
         color: black;
-      } 
+      } */
+      
 
+      /* Lesson 2 - Shipping Calculator.*/
+      body {
+        font-family: Arial;
+        font-size: 15px;
+        margin-left: 20px;
+      }
       .cost-input {
         font-size: 15px;
         padding: 10px;
@@ -40,7 +45,11 @@
         padding: 12px 15px;
         font-size: 15px;
         cursor: pointer;
-      } */
+      } 
+
+      .error-message {
+        color: red;
+      }
       
 
       /* Lesson 3 - CSS Buttons.
@@ -120,7 +129,7 @@
     </button>
     -->
 
-    <!-- Lesson 2 - Shipping Calculator. 
+    <!-- Lesson 2 - Shipping Calculator. -->
     <p>Amazon Shipping Calculator</p>
     <p>Orders under $40 = +$10 shipping.</p>
     <p>Orders over $40 = FREE shipping.</p>
@@ -133,7 +142,7 @@
     </button>
 
     <p class="js-total-cost"></p>
-    -->
+    
 
     <!-- Lesson 3 - CSS Buttons. 
     <button class="add-button">
@@ -177,20 +186,30 @@
       }
       */
       
-      /* Lesson 2 - Shipping Calculator.
+      /* Lesson 2 - Shipping Calculator.*/
       function handleCostKeydown(event) {
-        event.key === 'Enter' ? CalculateTotal() : document.querySelector('.js-total-cost').innerHTML =   '';
+        event.key === 'Enter' ? CalculateTotal() : document.querySelector('.js-total-cost').innerHTML = '';
       }
 
       function CalculateTotal() {
         const inputElement = document.querySelector('.js-cost-input');
-        let cost = Number(inputElement.value) * 100; // Precision issues resolution.
+        const totalCost = document.querySelector('.js-total-cost');
+        let cost = Number(inputElement.value) * 100; // Precision issues resolution
 
-        cost < 4000 ? cost += 1000 : cost;
-
-        document.querySelector('.js-total-cost').innerHTML = `$${cost / 100}`;
+        if (cost <= 0) {
+          totalCost.innerHTML = 'Error: cost must be greater than $0';
+          totalCost.classList.add('error-message');
+        } else if (cost < 4000) {
+          cost += 1000;
+          totalCost.innerHTML = `$${cost / 100}`;
+          totalCost.classList.remove('error-message');
+        } else {
+          cost;
+          totalCost.innerHTML = `$${cost / 100}`;
+          totalCost.classList.remove('error-message');
+        }
       }
-      */
+      
       
       /* Lesson 4 - .classList.contains().
       console.log(document.querySelector('.js-button').classList.contains('js-button'));
