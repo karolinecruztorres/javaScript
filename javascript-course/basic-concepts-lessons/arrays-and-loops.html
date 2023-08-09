@@ -1,89 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arrays and Loops</title>
-</head>
-<body>
-  <script>
-    /* Arrays Basics.
-    const myArray = [
-      10, 
-      20, 
-      30
-    ];
-    console.log(myArray);
-    console.log(myArray[0]);
-    myArray[0] = 99;
-    console.log(myArray);
-
-    [1, 'hello', true, { name: 'socks' }, [1, 2]] // An array can store strings, numbers, objects, and a nested array simultaneously
-
-    console.log(typeof [1, 2]); // Returns that the array is an object, because every array is an object.
-    console.log(Array.isArray([1, 2])); // Returns that the object is of array type.
-
-    console.log(myArray.length); // Tells how many values are in the array.
-    myArray.push(100); // Adds a value to the end of the array.
-    console.log(myArray);
-    console.log(myArray.length); 
-
-    myArray.splice(0, 1); // Removes a value from an array.
-    console.log(myArray);
-    myArray.splice(0, 2); 
-    console.log(myArray);
-    */
-
-    /* Loops Basics. 
-    let i = 1;
-
-    while (i <= 5) {
-      console.log(i);
-      i++;
-    }
-   
-    for (let i = 1; i <= 5; i++) {
-      console.log(i);
-    }
-
-    // While is better for the non-standard loop.
-    while (randomNumber) {
-      randomNumber = Math.random();
-    }
-
-    console.log(randomNumber);
-    */
-
-    /*
-    const todoList = [
-      'make dinner',
-      'wash dishes',
-      'watch youtube'
-    ];
-
-    for (let i = 0; i < todoList.length; i++) {
-      console.log(todoList[i]);
-    }
-    */
-
-    const nums = [1, 1, 3];
-    let total = 0;
-
-    for (let i = 0; i < nums.length; i++) {
-      const num = nums[i];
-      total += num;
-    }
-    console.log(total);
-
-
-    const numsDoubled = [];
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Loops</title>
+  </head>
+  <body>
+    <script>
+      /* Arrays Basics.
+      const myArray = [
+        10, 
+        20, 
+        30
+      ];
+      console.log(myArray);
+      console.log(myArray[0]);
+      myArray[0] = 99;
+      console.log(myArray);
     
-    for (let i = 0; i < nums.length; i++) {
-      const num = nums[i];
-      numsDoubled.push(num * 2);
-    }
-    console.log(numsDoubled);
-
-  </script>
-</body>
+      [1, 'hello', true, { name: 'socks' }, [1, 2]] // An array can store strings,  numbers, objects, and a nested array simultaneously
+    
+      console.log(typeof [1, 2]); // Returns that the array is an object, because   every array is an object.
+      console.log(Array.isArray([1, 2])); // Returns that the object is of array  type.
+    
+      console.log(myArray.length); // Tells how many values are in the array.
+      myArray.push(100); // Adds a value to the end of the array.
+      console.log(myArray);
+      console.log(myArray.length); 
+    
+      myArray.splice(0, 1); // Removes a value from an array.
+      console.log(myArray);
+      myArray.splice(0, 2); 
+      console.log(myArray);
+      */
+    
+      /* Loops Basics. 
+      let i = 1;
+    
+      while (i <= 5) {
+        console.log(i);
+        i++;
+      }
+    
+      for (let i = 1; i <= 5; i++) {
+        console.log(i);
+      }
+    
+      // While is better for the non-standard loop.
+      while (randomNumber) {
+        randomNumber = Math.random();
+      }
+    
+      console.log(randomNumber);
+      */
+    
+      /*
+      const todoList = [
+        'make dinner',
+        'wash dishes',
+        'watch youtube'
+      ];
+    
+      for (let i = 0; i < todoList.length; i++) {
+        console.log(todoList[i]);
+      }
+      */
+    
+      /*
+      const nums = [1, 1, 3];
+      let total = 0;
+    
+      for (let i = 0; i < nums.length; i++) {
+        const num = nums[i];
+        total += num;
+      }
+      console.log(total);
+    
+    
+      const numsDoubled = [];
+      
+      for (let i = 0; i < nums.length; i++) {
+        const num = nums[i];
+        numsDoubled.push(num * 2);
+      }
+      console.log(numsDoubled);
+      */
+    
+      /* Lesson 1 - Modify an array.
+      let myArray = [10, 20, 30];
+      myArray[2] = 99;
+      console.log(myArray);
+      */
+    
+      /* Lesson 2 - Return the last value.
+      const numbers = [1, 20, 22, 24, 5];
+      const strings = ['hi', 'hello', 'good']; 
+    
+      function getLastValue(array) {
+        const lastIndex = array.length -1;
+        return array[lastIndex];
+      }
+      
+      console.log(getLastValue(numbers));
+      console.log(getLastValue(strings));
+      */
+    </script>
+  </body>
 </html>
