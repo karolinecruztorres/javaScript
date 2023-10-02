@@ -1,4 +1,4 @@
-/*
+
 //arrow function (outra forma de excrever função anonima)
 const sayMyName = (parameter) => {
     console.log(parameter);
@@ -50,7 +50,7 @@ console.log(phrase2.includes("Amor"));
 let word1 = "manipulaçao";
 console.log(Array.from(word1));
 
-*/
+
 
 let techs = ["html", "css", "js"];
 
