@@ -79,4 +79,84 @@ const wordList = [
     word: "moon", 
     hint: "The natural satellite of the Earth" 
   },
+  { 
+    word: "ocean", 
+    hint: "A large body of saltwater that covers most of the Earth's surface" 
+  },
+  { 
+    word: "garden", 
+    hint: "An outdoor space, usually with plants, flowers, and sometimes a lawn" 
+  },
+  { 
+    word: "fireworks", 
+    hint: "A display of colorful explosions in the sky, often used in celebrations" 
+  },
+  { 
+    word: "bicycle", 
+    hint: "A human-powered vehicle with two wheels and pedals" 
+  },
+  { 
+    word: "sunset", 
+    hint: "The daily disappearance of the sun below the horizon" 
+  },
+  { 
+    word: "umbrella", 
+    hint: "A portable device used for protection against rain or sun" 
+  },
+  { 
+    word: "chocolate", 
+    hint: "A sweet food made from roasted and ground cacao seeds" 
+  },
+  { 
+    word: "telephone", 
+    hint: "A communication device used for voice calls" 
+  },
+  { 
+    word: "cactus", 
+    hint: "A succulent plant with thick, fleshy stems and spines" 
+  },
+  { 
+    word: "island", 
+    hint: "A landmass surrounded by water and smaller than a continent" 
+  },
+  { 
+    word: "giraffe", 
+    hint: "A tall African mammal with a long neck and spotted coat" 
+  },
+  { 
+    word: "jazz", 
+    hint: "A genre of music that originated in the United States" 
+  },
+  { 
+    word: "dragon", 
+    hint: "A mythical, fire-breathing creature often depicted in folklore" 
+  },
+  { 
+    word: "ballet", 
+    hint: "A type of performance dance that originated in the Italian Renaissance courts" 
+  },
+  { 
+    word: "rainbow", 
+    hint: "A meteorological phenomenon that is caused by reflection, refraction, and dispersion of light" 
+  },
+  { 
+    word: "robot", 
+    hint: "A machine capable of carrying out tasks autonomously or with minimal human intervention" 
+  },
+  { 
+    word: "snorkel", 
+    hint: "A breathing tube used in underwater activities, such as snorkeling" 
+  },
+  { 
+    word: "breeze", 
+    hint: "A gentle wind, especially a pleasant and mild one" 
+  },
+  { 
+    word: "zeppelin", 
+    hint: "A type of rigid airship named after the German inventor Count Ferdinand von Zeppelin" 
+  },
+  { 
+    word: "quasar", 
+    hint: "An astronomical object that emits an exceptionally large amount of energy" 
+  },  
 ];
