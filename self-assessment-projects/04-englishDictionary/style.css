@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #9894d6;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 8fr 1fr;
+  width: 380px;
+  padding: 50px 40px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+#search {
+  width: 72%;
+  padding-left: 5px;
+  border: none;
+  border-bottom: 2px solid #9894d6;
+  font-size: 16px;
+}
+
+#submit-btn {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+  background-color: #9894d6;
+}
+
+#searched-word {
+  margin-top: 70px;
+  font-size: 22px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+
+#sound {
+  display: flex;
+  background-color: #fff;
+  border: none;
+  align-items: end;
+  justify-content: end;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+  color: #9894d6;
+  font-weight: bolder;
+}
+
+#etymology {
+  font-size: 14px;
+  font-style: italic;
+  color: #a1a1a1;
+  grid-column: span 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 3;
+}
+
+.definitions {
+  margin-top: 15px;
+  text-align: justify;
+  font-size: 14px; 
+  grid-column: span 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 4;
+}
+
+#definition {
+  margin-top: 15px;
+}
+
+#definition::first-letter {
+  text-transform: uppercase;
+}
+
+#example {
+  border-left: 5px solid #9894d6;
+  margin-top: 25px;
+  padding-left: 15px;
+  font-size: 14px;
+  font-style: oblique;
+  grid-column: span 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 5;
+  grid-row-end: 5;
+}
